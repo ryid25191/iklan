@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
+
+body {
+  background-image: url('strawberry-bg.webp'); /* ganti nama sesuai file kamu */
+  background-size: cover; /* biar nutup seluruh layar */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* biar gak ikut scroll */
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baloo 2", cursive;
+}
+
+/* ==== Banner (background video) ==== */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(1);
+  background: #000;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  position: relative;
+}
+
+.logo {
+  width: 120px;
+}
+
+nav ul {
+  list-style: none; /* hilangin titik list */
+  display: flex; /* biar sejajar ke samping */
+  justify-content: center; /* atau space-around / flex-end */
+  gap: 30px; /* jarak antar menu */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffd6e0;
+  text-shadow: 0 0 10px #ffd6e0;
+}
+nav ul li a.active{
+    color:black
+}
+
+/* ==== Content ==== */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  background: rgba(255, 240, 245, 0.2);
+  padding: 30px 50px;
+  border-radius: 30px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
+}
+
+.content h1 {
+  font-size: 70px;
+  color: #fffafc;
+  text-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 20px;
+  color: #ffeef3;
+  margin-bottom: 25px;
+}
+
+/* ==== Button ==== */
+button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ffc0cb, #d9a282);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.8);
+  background: linear-gradient(135deg, #ffd6e0, #e0b48c);
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 45px;
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+}
